@@ -280,6 +280,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            $.ajax({\r\n");
       out.write("                url: \"http://torfl.tovcard.com:3000/get-user-check?name=\"+$(\"#j_username\").val(),\r\n");
       out.write("                method: \"get\",\r\n");
+      out.write("                async: false,\r\n");
       out.write("                success: function(resp) {\r\n");
       out.write("                    if (resp.isInFiveMinute) {\r\n");
       out.write("                        alert(\"5분 이내에 접속한 중복접속 기록이 있습니다.\");\r\n");

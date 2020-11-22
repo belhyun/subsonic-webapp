@@ -97,6 +97,7 @@
             $.ajax({
                 url: "http://torfl.tovcard.com:3000/get-user-check?name="+$("#j_username").val(),
                 method: "get",
+                async: false,
                 success: function(resp) {
                     if (resp.isInFiveMinute) {
                         alert("5분 이내에 접속한 중복접속 기록이 있습니다.");

@@ -41,6 +41,17 @@
         }
 
         function logout() {
+            const userId = '${model.user.username}';
+            $.ajax({
+                url: "http://torfl.tovcard.com:3000/delete-user?name="+userId,
+                method: "get",
+                success: function() {
+                    return true;
+                },
+                error: function() {
+                    return false;
+                }
+            });
             parent.location.href = "j_acegi_logout";
         }
 
@@ -163,16 +174,21 @@
 </body>
     <script type="text/javascript">
     $(document).ready(function() {
-        $.ajax({
-            url: "http://torfl.tovcard.com:3000/update-user?name="+$("#j_username").val(),
-            method: "get",
-            success: function() {
-                return true;
-            },
-            error: function() {
-                return false;
-            }
-        });
+        setInterval(trigger, 300000);
+        function trigger() {
+            const userId = '${model.user.username}';
+            $.ajax({
+                url: "http://torfl.tovcard.com:3000/update-user?name="+userId,
+                method: "get",
+                success: function() {
+                    return true;
+                },
+                error: function() {
+                    return false;
+                }
+            });
+        }
+        trigger();
     });
     </script>
 </html>
