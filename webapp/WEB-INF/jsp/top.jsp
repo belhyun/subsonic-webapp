@@ -92,7 +92,7 @@
     <div style="display:flex; align-items:center; text-align:center">
         <span id="show-side-bar" class="top-menu-item" style="display:${model.showSideBar ? 'none' : 'inline'}; margin-right:1em" onclick="toggleSideBar(true)"><i class="fa fa-bars fa-lg icon"></i>&nbsp;</span>
         <span id="hide-side-bar" class="top-menu-item" style="display:${model.showSideBar ? 'inline' : 'none'}; margin-right:1em" onclick="toggleSideBar(false)"><i class="fa fa-bars fa-lg icon"></i>&nbsp;</span>
-        <span class="top-menu-item" onclick="showPage('home.view')"><i class="fa fa-home fa-fw fa-lg icon"></i>&nbsp;${home}</span>
+        <!--<span class="top-menu-item" onclick="showPage('home.view')"><i class="fa fa-home fa-fw fa-lg icon"></i>&nbsp;${home}</span>-->
         <span class="top-menu-item" onclick="showPage('artists.view')"><i class="fa fa-sort-alpha-asc fa-fw icon"></i>&nbsp;${artists}</span>
         <!--<span class="top-menu-item" onclick="showPage('nowPlaying.view')"><i class="fa fa-headphones fa-fw fa-lg icon"></i>&nbsp;${nowPlaying}</span>-->
         <!--<span class="top-menu-item" onclick="showPage('starred.view')"><i class="fa fa-star fa-fw fa-lg icon"></i>&nbsp;${starred}</span>-->

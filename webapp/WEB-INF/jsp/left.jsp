@@ -72,11 +72,12 @@
 
 <body class="bgcolor2 leftframe">
 <a name="top"></a>
-
+<!--
 <div style="padding-top:0.5em; padding-bottom:1.0em; white-space:nowrap; cursor:pointer; user-select: none; -webkit-user-select: none;" onclick="showPage('help.view')">
     <img src="http://www.ires.co.kr/board/data/board_bbs09/%ED%86%A0%EB%A5%B4%ED%94%8C%205%ED%9A%8C%20%ED%8F%AC%EC%8A%A4%ED%84%B0.JPG" style="height:50px; vertical-align:middle" title="<fmt:message key="top.help"/>" alt="">
     <span style="font-size:20px; font-weight:400; vertical-align:middle; padding-left:3px">TORFL</span>
 </div>
+-->
 
 <div class="left-menu-item" onclick="logout()">
     <fmt:message key="top.logout" var="logout"><fmt:param value="${model.user.username}"/></fmt:message>
@@ -101,9 +102,11 @@
 </div>
 -->
 
+<!--
 <div class="left-menu-item" onclick="showPage('more.view')">
     <i class="fa fa-plus-square fa-lg fa-fw icon"></i>&nbsp;<fmt:message key="top.more"/>
 </div>
+-->
 <!--
 <div class="left-menu-item" onclick="showPage('help.view')">
     <i class="fa fa-info-circle fa-lg fa-fw icon"></i>&nbsp;<fmt:message key="help.title"><fmt:param value="${model.brand}"/></fmt:message>

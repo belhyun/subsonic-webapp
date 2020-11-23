@@ -79,7 +79,7 @@ public final class top_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("<title>Tofl Stream</title>\r\n");
+      out.write("<title>Listen TORFL</title>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       if (_jspx_meth_c_set_0(_jspx_page_context))
         return;
@@ -307,9 +307,9 @@ public final class top_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <span id=\"hide-side-bar\" class=\"top-menu-item\" style=\"display:");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${model.showSideBar ? 'inline' : 'none'}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("; margin-right:1em\" onclick=\"toggleSideBar(false)\"><i class=\"fa fa-bars fa-lg icon\"></i>&nbsp;</span>\r\n");
-      out.write("        <span class=\"top-menu-item\" onclick=\"showPage('home.view')\"><i class=\"fa fa-home fa-fw fa-lg icon\"></i>&nbsp;");
+      out.write("        <!--<span class=\"top-menu-item\" onclick=\"showPage('home.view')\"><i class=\"fa fa-home fa-fw fa-lg icon\"></i>&nbsp;");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${home}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("</span>\r\n");
+      out.write("</span>-->\r\n");
       out.write("        <span class=\"top-menu-item\" onclick=\"showPage('artists.view')\"><i class=\"fa fa-sort-alpha-asc fa-fw icon\"></i>&nbsp;");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${artists}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("</span>\r\n");
@@ -337,7 +337,7 @@ public final class top_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("</form>\r\n");
       out.write("\r\n");
-      out.write("</body></html>");
+      out.write("</body></html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

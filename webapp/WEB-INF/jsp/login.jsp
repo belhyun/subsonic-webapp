@@ -1,97 +1,113 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" %>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-    <html><head>
+<html><head>
     <%@ include file="head.jsp" %>
     <script type="text/javascript">
-    if (window != window.top) {
-    top.location.href = location.href;
-    }
+        if (window != window.top) {
+            top.location.href = location.href;
+        }
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-<%--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />--%>
-    </head>
-    <body class="mainframe bgcolor1" onload="document.getElementById('j_username').focus()">
+    <%--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />--%>
+    <link rel="stylesheet" href="<c:url value="/script/Login_v3/vendor/bootstrap/css/bootstrap.min.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/fonts/Login_v3/fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/fonts/Login_v3/fonts/iconic/css/material-design-iconic-font.min.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/script/Login_v3/vendor/animate/animate.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/script/Login_v3/vendor/css-hamburgers/hamburgers.min.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/script/Login_v3/vendor/animsition/css/animsition.min.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/script/Login_v3/vendor/select2/select2.min.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/script/Login_v3/vendor/daterangepicker/daterangepicker.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/style/Login_v3/css/util.css"/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/style/Login_v3/css/main.css"/>" type="text/css">
+</head>
+<body>
+<body onload="document.getElementById('j_username').focus()">
 
-    <form id="loginForm" action="<c:url value="/j_acegi_security_check"/>" method="POST">
-    <div class="bgcolor2 dropshadow" align="center" style="padding:20px 50px 20px 50px;
-    margin-top:100px;margin-left:50px;margin-right:50px">
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('/icons/Login_v3/images/bg-01.jpg');">
+        <div class="wrap-login100" style="background:#E65100;width:1024px;">
+            <form id="loginForm" class="login100-form" action="<c:url value="/j_acegi_security_check"/>" method="POST">
+                <!--
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+                        <img src="http://torfl.or.kr/theme/basic/image/logo.jpg"/>
+					</span>
+                 -->
+                <span class="login100-form-title p-b-34 p-t-27">
+                    <!--
+                    <div>
+                        <img src="http://torfl.or.kr/theme/basic/image/logo.jpg" style="text-align: center"/>
+                    </div>
+                    -->
+                    러시아 토플 듣기
+					</span>
 
-    <div style="margin-bottom:1em;max-width:50em;text-align:left;"><sub:wiki text="${model.loginMessage}"/></div>
+                <div class="wrap-input100 validate-input" data-validate = "사용자명을 입력하세요">
+                    <input class="input100" type="text" name="j_username" id="j_username" name="j_username" placeholder="사용자명">
+                    <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                </div>
 
-    <table>
-    <tr>
-    <td colspan="2" align="center" style="padding-bottom:10px">
-    <img
-    src="http://www.ires.co.kr/board/data/board_bbs09/%ED%86%A0%EB%A5%B4%ED%94%8C%205%ED%9A%8C%20%ED%8F%AC%EC%8A%A4%ED%84%B0.JPG"
-    style="height:300px; vertical-align:middle" alt="">
-    <!--<span style="font-size:20px; font-weight:400; vertical-align:middle; padding-left:3px">TORFL STREAM</span>-->
-    </td>
-    </tr>
-    <tr>
-    <td align="left" style="padding-right:10px"><fmt:message key="login.username"/></td>
-    <td align="left"><input type="text" id="j_username" name="j_username" style="width:12em" tabindex="1"></td>
-    </tr>
+                <div class="wrap-input100 validate-input" data-validate="비밀번호를 입력하세요">
+                    <input class="input100" id="j_password" type="password" name="j_password" type="password" placeholder="비밀번호">
+                    <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                </div>
 
-    <tr>
-    <td align="left" style="padding-bottom:10px"><fmt:message key="login.password"/></td>
-    <td align="left" style="padding-bottom:10px"><input id="j_password" type="password" name="j_password" style="width:12em"
-    tabindex="2"></td>
-    </tr>
+                <!--
+                <div class="contact100-form-checkbox">
+                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                    <label class="label-checkbox100" for="ckb1">
+                        Remember me
+                    </label>
+                </div>
+                -->
 
-    <tr>
-    <td align="left"><input name="submit" type="submit" value="<fmt:message key="login.login"/>"
-    tabindex="4"></td>
-    <!--
-    <td align="left" class="detail">
-    <input type="checkbox" name="_acegi_security_remember_me" id="remember" class="checkbox" tabindex="3">
-    <label for="remember"><fmt:message key="login.remember"/></label>
-    </td>
-    -->
-    </tr>
-    <!--
-    <tr>
-    <td></td>
-    <td align="left" class="detail"><a href="recover.view"><fmt:message key="login.recover"/></a></td>
-    </tr>
-    -->
-
-    <c:if test="${model.logout}">
-        <tr><td colspan="2" style="padding-top:10px"><b><fmt:message key="login.logout"/></b></td></tr>
-    </c:if>
-    <c:if test="${model.error}">
-        <tr><td colspan="2" style="padding-top:10px"><span class="warning">
-        <fmt:message key="login.error"/>
-        </span></td></tr>
-    </c:if>
-
-    </table>
-
-    <!--
-    <c:if test="${model.insecure}">
-        <p class="warning">
-        <fmt:message key="login.insecure">
-            <fmt:param value="${model.brand}"/>
-        </fmt:message>
-        </p>
-    </c:if>
-    -->
-
+                <div class="container-login100-form-btn">
+                    <button name="submit" type="submit" class="login100-form-btn" value="<fmt:message key="login.login"/>">
+                        로그인
+                    </button>
+                </div>
+                <div style="margin-top:20px;text-align:center;color:white">
+                    <c:if test="${model.error}">
+                        <fmt:message key="login.error"/>
+                    </c:if>
+                </div>
+                <!--
+                <div class="text-center p-t-90">
+                    <a class="txt1" href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+                -->
+            </form>
+        </div>
     </div>
-    </form>
-    </body>
-    <script type="text/javascript">
+</div>
+
+
+<div id="dropDownSelect1"></div>
+
+<script type="text/javascript" src="<c:url value="/script/Login_v3/vendor/animsition/js/animsition.min.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/script/Login_v3/vendor/bootstrap/js/popper.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/script/Login_v3/vendor/bootstrap/js/bootstrap.min.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/script/Login_v3/vendor/select2/select2.min.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/script/Login_v3/vendor/daterangepicker/moment.min.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/script/Login_v3/vendor/daterangepicker/daterangepicker.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/script/Login_v3/vendor/countdowntime/countdowntime.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/script/Login_v3/js/main.js"/>"></script>
+<script type="text/javascript">
     $("#loginForm").submit(function(e){
-<%--        e.preventDefault();--%>
+        <%--        e.preventDefault();--%>
         return submitLogin();
-<%--        $("#loginForm").submit();--%>
+        <%--        $("#loginForm").submit();--%>
     });
 
     function submitLogin() {
-    <%--        if ($(".warning").length == 0) {--%>
-    <%--        alert("torfl.tovcard.com:8080/update-user?name="+$("#j_username").val());--%>
+        <%--        if ($(".warning").length == 0) {--%>
+        <%--        alert("torfl.tovcard.com:8080/update-user?name="+$("#j_username").val());--%>
         let loginSuccess = true;
         if($("#j_username").val().length > 0 && $("#j_password").val().length > 0) {
             $.ajax({
@@ -100,21 +116,21 @@
                 async: false,
                 success: function(resp) {
                     if (resp.isInFiveMinute) {
-                        alert("5분 이내에 접속한 중복접속 기록이 있습니다.");
+                        alert("5분 이내에 접속한 중복접속 기록이 있습니다.\n※다음과 같이 조치가 가능합니다.※\n1) 기존 로그인한 브라우저에서 로그아웃 처리\n2) 5분 뒤 재접속");
                         loginSuccess = false;
                         return false;
-<%--                        return true;--%>
+                        <%--                        return true;--%>
                     }
-<%--                    $.ajax({--%>
-<%--                        url: "http://torfl.tovcard.com:3000/update-user?name="+$("#j_username").val(),--%>
-<%--                        method: "get",--%>
-<%--                        success: function() {--%>
-<%--                            return true;--%>
-<%--                        },--%>
-<%--                        error: function() {--%>
-<%--                            return false;--%>
-<%--                        }--%>
-<%--                    });--%>
+                    <%--                    $.ajax({--%>
+                    <%--                        url: "http://torfl.tovcard.com:3000/update-user?name="+$("#j_username").val(),--%>
+                    <%--                        method: "get",--%>
+                    <%--                        success: function() {--%>
+                    <%--                            return true;--%>
+                    <%--                        },--%>
+                    <%--                        error: function() {--%>
+                    <%--                            return false;--%>
+                    <%--                        }--%>
+                    <%--                    });--%>
                 },
                 error: function() {
                     return false;
@@ -123,5 +139,6 @@
         }
         return loginSuccess;
     }
-    </script>
-    </html>
+</script>
+</body>
+</html>

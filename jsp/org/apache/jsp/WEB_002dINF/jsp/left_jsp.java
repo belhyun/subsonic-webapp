@@ -110,7 +110,7 @@ static {
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("<title>Tofl Stream</title>\r\n");
+      out.write("<title>Listen TORFL</title>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       if (_jspx_meth_c_set_0(_jspx_page_context))
         return;
@@ -294,7 +294,7 @@ static {
       out.write("\r\n");
       out.write("<body class=\"bgcolor2 leftframe\">\r\n");
       out.write("<a name=\"top\"></a>\r\n");
-      out.write("\r\n");
+      out.write("<!--\r\n");
       out.write("<div style=\"padding-top:0.5em; padding-bottom:1.0em; white-space:nowrap; cursor:pointer; user-select: none; -webkit-user-select: none;\" onclick=\"showPage('help.view')\">\r\n");
       out.write("    <img src=\"http://www.ires.co.kr/board/data/board_bbs09/%ED%86%A0%EB%A5%B4%ED%94%8C%205%ED%9A%8C%20%ED%8F%AC%EC%8A%A4%ED%84%B0.JPG\" style=\"height:50px; vertical-align:middle\" title=\"");
       if (_jspx_meth_fmt_message_0(_jspx_page_context))
@@ -302,6 +302,7 @@ static {
       out.write("\" alt=\"\">\r\n");
       out.write("    <span style=\"font-size:20px; font-weight:400; vertical-align:middle; padding-left:3px\">TORFL</span>\r\n");
       out.write("</div>\r\n");
+      out.write("-->\r\n");
       out.write("\r\n");
       out.write("<div class=\"left-menu-item\" onclick=\"logout()\">\r\n");
       out.write("    ");
@@ -335,12 +336,14 @@ static {
       out.write("</div>\r\n");
       out.write("-->\r\n");
       out.write("\r\n");
+      out.write("<!--\r\n");
       out.write("<div class=\"left-menu-item\" onclick=\"showPage('more.view')\">\r\n");
       out.write("    <i class=\"fa fa-plus-square fa-lg fa-fw icon\"></i>&nbsp;");
       if (_jspx_meth_fmt_message_5(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("</div>\r\n");
+      out.write("-->\r\n");
       out.write("<!--\r\n");
       out.write("<div class=\"left-menu-item\" onclick=\"showPage('help.view')\">\r\n");
       out.write("    <i class=\"fa fa-info-circle fa-lg fa-fw icon\"></i>&nbsp;");

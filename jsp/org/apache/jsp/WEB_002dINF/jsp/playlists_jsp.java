@@ -113,7 +113,7 @@ static {
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("<title>Tofl Stream</title>\r\n");
+      out.write("<title>Listen TORFL</title>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       if (_jspx_meth_c_set_0(_jspx_page_context))
         return;
@@ -272,14 +272,10 @@ static {
       out.write("\r\n");
       out.write("\r\n");
       out.write("<div style=\"padding-top:1em; padding-bottom:2em\">\r\n");
-      out.write("    <span style=\"padding-right:3em\"><i class=\"fa fa-music fa-lg fa-fw icon\"></i>&nbsp;&nbsp;<a href=\"javascript:noop()\" onclick=\"createEmptyPlaylist()\">");
-      if (_jspx_meth_fmt_message_7(_jspx_page_context))
+      out.write("    ");
+      if (_jspx_meth_c_if_1(_jspx_page_context))
         return;
-      out.write("</a></span>\r\n");
-      out.write("    <span><i class=\"fa fa-download fa-lg fa-fw icon\"></i>&nbsp;&nbsp;<a href=\"importPlaylist.view\">");
-      if (_jspx_meth_fmt_message_8(_jspx_page_context))
-        return;
-      out.write("</a></span>\r\n");
+      out.write("\r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
@@ -1392,14 +1388,49 @@ static {
     return false;
   }
 
-  private boolean _jspx_meth_fmt_message_7(PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_if_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_1.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_1.setParent(null);
+    _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${model.user.username == 'admin'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
+    int _jspx_eval_c_if_1 = _jspx_th_c_if_1.doStartTag();
+    if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("        <span style=\"padding-right:3em\"><i class=\"fa fa-music fa-lg fa-fw icon\"></i>&nbsp;&nbsp;<a href=\"javascript:noop()\" onclick=\"createEmptyPlaylist()\">");
+        if (_jspx_meth_fmt_message_7(_jspx_th_c_if_1, _jspx_page_context))
+          return true;
+        out.write("</a></span>\r\n");
+        out.write("        <span><i class=\"fa fa-download fa-lg fa-fw icon\"></i>&nbsp;&nbsp;<a href=\"importPlaylist.view\">");
+        if (_jspx_meth_fmt_message_8(_jspx_th_c_if_1, _jspx_page_context))
+          return true;
+        out.write("</a></span>\r\n");
+        out.write("    ");
+        int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_message_7(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_1, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  fmt:message
     org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_message_7 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _jspx_tagPool_fmt_message_key_nobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
     _jspx_th_fmt_message_7.setPageContext(_jspx_page_context);
-    _jspx_th_fmt_message_7.setParent(null);
+    _jspx_th_fmt_message_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_1);
     _jspx_th_fmt_message_7.setKey("left.createplaylist");
     int _jspx_eval_fmt_message_7 = _jspx_th_fmt_message_7.doStartTag();
     if (_jspx_th_fmt_message_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1410,14 +1441,14 @@ static {
     return false;
   }
 
-  private boolean _jspx_meth_fmt_message_8(PageContext _jspx_page_context)
+  private boolean _jspx_meth_fmt_message_8(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_1, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  fmt:message
     org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_message_8 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _jspx_tagPool_fmt_message_key_nobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
     _jspx_th_fmt_message_8.setPageContext(_jspx_page_context);
-    _jspx_th_fmt_message_8.setParent(null);
+    _jspx_th_fmt_message_8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_1);
     _jspx_th_fmt_message_8.setKey("left.importplaylist");
     int _jspx_eval_fmt_message_8 = _jspx_th_fmt_message_8.doStartTag();
     if (_jspx_th_fmt_message_8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

@@ -1,6 +1,6 @@
 <%@ include file="include.jsp" %>
 
-<title>Tofl Stream</title>
+<title>Listen TORFL</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <c:set var="styleSheet"><spring:theme code="styleSheet"/></c:set>
 <!--<link rel="icon" type="image/png" href="<c:url value="/icons/favicon.png"/>"/>-->
