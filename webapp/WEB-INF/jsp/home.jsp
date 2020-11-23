@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="iso-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html><head>
@@ -47,6 +47,7 @@
     <h2>${model.welcomeSubtitle}</h2>
 </c:if>
 -->
+<!--
 <h2 style="white-space:normal">
     <c:forTokens items="random newest starred highest frequent recent decade genre alphabetical" delims=" " var="cat" varStatus="loopStatus">
         <c:if test="${loopStatus.count > 1}">|</c:if>
@@ -56,8 +57,11 @@
         <span class="${model.listType eq cat ? 'headerSelected' : 'header'}"><a href="${url}"><fmt:message key="home.${cat}.title"/></a></span>
     </c:forTokens>
 </h2>
-
+-->
+<!--<h1>상단의 재생목록을 클릭하여 진행하시면 됩니다.</h1>-->
+<!--
 <%@ include file="homePager.jsp" %>
+-->
 <!--
 <c:if test="${not empty model.welcomeMessage}">
     <div style="width:15em;float:right;padding:0 1em 0 1em;border-left:1px solid #<spring:theme code="detailColor"/>">
@@ -140,6 +144,11 @@
                     return false;
                 }
             });
+            //$("#go-playlist").trigger("click");
+            parent.frames.main.location.href = 'playlists.view';
+            //setTimeout(function() {
+            //    showPage('playlists.view');
+            //}, 1000);
         });
     </script>
 

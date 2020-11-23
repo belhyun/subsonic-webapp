@@ -267,14 +267,15 @@ static {
       out.write("            $.ajax({\r\n");
       out.write("                url: \"http://torfl.tovcard.com:3000/delete-user?name=\"+userId,\r\n");
       out.write("                method: \"get\",\r\n");
+      out.write("                async: false,\r\n");
       out.write("                success: function() {\r\n");
+      out.write("                    parent.location.href = \"j_acegi_logout\";\r\n");
       out.write("                    return true;\r\n");
       out.write("                },\r\n");
       out.write("                error: function() {\r\n");
       out.write("                    return false;\r\n");
       out.write("                }\r\n");
       out.write("            });\r\n");
-      out.write("            parent.location.href = \"j_acegi_logout\";\r\n");
       out.write("        }\r\n");
       out.write("\r\n");
       out.write("        function changeMusicFolder(musicFolderId) {\r\n");

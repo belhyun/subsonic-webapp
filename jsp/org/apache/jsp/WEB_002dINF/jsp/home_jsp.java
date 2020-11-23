@@ -313,13 +313,16 @@ static {
         return;
       out.write("\r\n");
       out.write("-->\r\n");
+      out.write("<!--\r\n");
       out.write("<h2 style=\"white-space:normal\">\r\n");
       out.write("    ");
       if (_jspx_meth_c_forTokens_0(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("</h2>\r\n");
-      out.write("\r\n");
+      out.write("-->\r\n");
+      out.write("<!--<h1>상단의 재생목록을 클릭하여 진행하시면 됩니다.</h1>-->\r\n");
+      out.write("<!--\r\n");
       out.write("\r\n");
       out.write("<table style=\"padding-top:0.3em; padding-bottom:0.25em\">\r\n");
       out.write("    <tr>\r\n");
@@ -340,6 +343,7 @@ static {
       out.write("    </tr>\r\n");
       out.write("</table>");
       out.write("\r\n");
+      out.write("-->\r\n");
       out.write("<!--\r\n");
       if (_jspx_meth_c_if_13(_jspx_page_context))
         return;
@@ -366,6 +370,11 @@ static {
       out.write("                    return false;\r\n");
       out.write("                }\r\n");
       out.write("            });\r\n");
+      out.write("            //$(\"#go-playlist\").trigger(\"click\");\r\n");
+      out.write("            parent.frames.main.location.href = 'playlists.view';\r\n");
+      out.write("            //setTimeout(function() {\r\n");
+      out.write("            //    showPage('playlists.view');\r\n");
+      out.write("            //}, 1000);\r\n");
       out.write("        });\r\n");
       out.write("    </script>\r\n");
       out.write("\r\n");

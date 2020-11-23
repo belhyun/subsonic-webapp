@@ -29,7 +29,7 @@
 
 <div class="limiter">
     <div class="container-login100" style="background-image: url('/icons/Login_v3/images/bg-01.jpg');">
-        <div class="wrap-login100" style="background:#E65100;width:1024px;">
+        <div class="wrap-login100" style="background:#E65100;width:500px;">
             <form id="loginForm" class="login100-form" action="<c:url value="/j_acegi_security_check"/>" method="POST">
                 <!--
 					<span class="login100-form-logo">
@@ -43,7 +43,7 @@
                         <img src="http://torfl.or.kr/theme/basic/image/logo.jpg" style="text-align: center"/>
                     </div>
                     -->
-                    러시아 토플 듣기
+                    러시아 토플 듣기 시스템
 					</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "사용자명을 입력하세요">
@@ -99,6 +99,12 @@
 <script type="text/javascript" src="<c:url value="/script/Login_v3/vendor/countdowntime/countdowntime.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/script/Login_v3/js/main.js"/>"></script>
 <script type="text/javascript">
+    $(document).ready(function() {
+        if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+            alert("IE 브라우저에서는 사용이 제한됩니다. 다른 브라우저를 사용해 주세요.");
+            window.close();
+        }
+    });
     $("#loginForm").submit(function(e){
         <%--        e.preventDefault();--%>
         return submitLogin();

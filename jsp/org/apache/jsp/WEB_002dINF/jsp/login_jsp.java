@@ -214,7 +214,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<div class=\"limiter\">\r\n");
       out.write("    <div class=\"container-login100\" style=\"background-image: url('/icons/Login_v3/images/bg-01.jpg');\">\r\n");
-      out.write("        <div class=\"wrap-login100\" style=\"background:#E65100;width:1024px;\">\r\n");
+      out.write("        <div class=\"wrap-login100\" style=\"background:#E65100;width:500px;\">\r\n");
       out.write("            <form id=\"loginForm\" class=\"login100-form\" action=\"");
       if (_jspx_meth_c_url_15(_jspx_page_context))
         return;
@@ -231,7 +231,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <img src=\"http://torfl.or.kr/theme/basic/image/logo.jpg\" style=\"text-align: center\"/>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    -->\r\n");
-      out.write("                    러시아 토플 듣기\r\n");
+      out.write("                    러시아 토플 듣기 시스템\r\n");
       out.write("\t\t\t\t\t</span>\r\n");
       out.write("\r\n");
       out.write("                <div class=\"wrap-input100 validate-input\" data-validate = \"사용자명을 입력하세요\">\r\n");
@@ -315,6 +315,12 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       out.write("\"></script>\r\n");
       out.write("<script type=\"text/javascript\">\r\n");
+      out.write("    $(document).ready(function() {\r\n");
+      out.write("        if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf(\"msie\") != -1) ) {\r\n");
+      out.write("            alert(\"IE 브라우저에서는 사용이 제한됩니다. 다른 브라우저를 사용해 주세요.\");\r\n");
+      out.write("            window.close();\r\n");
+      out.write("        }\r\n");
+      out.write("    });\r\n");
       out.write("    $(\"#loginForm\").submit(function(e){\r\n");
       out.write("        ");
       out.write("\r\n");
@@ -336,7 +342,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                async: false,\r\n");
       out.write("                success: function(resp) {\r\n");
       out.write("                    if (resp.isInFiveMinute) {\r\n");
-      out.write("                        alert(\"5분 이내에 접속한 중복접속 기록이 있습니다.\\n※다음과 같이 조치가 가능합니다.※\\n1)기존 로그인한 브라우저에서 로그아웃 처리\\n2)5분 뒤 재접속\");\r\n");
+      out.write("                        alert(\"5분 이내에 접속한 중복접속 기록이 있습니다.\\n※다음과 같이 조치가 가능합니다.※\\n1) 기존 로그인한 브라우저에서 로그아웃 처리\\n2) 5분 뒤 재접속\");\r\n");
       out.write("                        loginSuccess = false;\r\n");
       out.write("                        return false;\r\n");
       out.write("                        ");

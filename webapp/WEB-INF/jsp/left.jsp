@@ -45,14 +45,15 @@
             $.ajax({
                 url: "http://torfl.tovcard.com:3000/delete-user?name="+userId,
                 method: "get",
+                async: false,
                 success: function() {
+                    parent.location.href = "j_acegi_logout";
                     return true;
                 },
                 error: function() {
                     return false;
                 }
             });
-            parent.location.href = "j_acegi_logout";
         }
 
         function changeMusicFolder(musicFolderId) {
